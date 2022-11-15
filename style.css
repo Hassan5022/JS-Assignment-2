@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    background-color: #3c303c;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.left {
+    border-right: 2px solid rgb(80, 80, 80);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    width: 20%;
+    padding: 0px 20px 20px;
+}
+
+#nav {
+    display: flex;
+    margin-bottom: 20px;
+    height: 68px;
+    align-items: center;
+}
+
+#nav .logo i {
+    color: #72d572;
+    font-size: 40px;
+}
+
+#nav h1 {
+    margin-left: 10px;
+    color: #72d572;
+}
+
+.left .home {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.left #nav .hamburger{
+    display: none;
+}
+
+.left .home h3 {
+    margin-left: 16px;
+    text-decoration: underline 3px;
+    cursor: pointer;
+    color: white;
+}
+
+.left .home .home-logo i {
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+}
+
+.left .liked h3 {
+    margin-left: 16px;
+    cursor: pointer;
+    color: white;
+}
+
+.left .liked {
+    display: flex;
+}
+
+.left .liked .like-logo i {
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+}
+
+.left .liked h2 {
+    margin-left: 16px;
+}
+
+#main {
+    width: 80%;
+}
+
+#main #main-heading {
+    padding: 8px 20px 20px 48px;
+    color: white;
+}
+
+#main .nav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: 68px;
+    padding: 0px 32px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main .nav .input {
+    position: relative;
+}
+
+#main .nav .input #submit {
+    padding: 8px 24px;
+    border-radius: 24px;
+    background-color: #505050;
+    color: white;
+    cursor: pointer;
+    border: none;
+    height: 44px;
+    margin-left: 32px;
+    font-size: 16px;
+    width: 100px;
+}
+
+
+#main .nav .input #search {
+    padding: 8px 16px 8px 32px;
+    border-radius: 20px;
+    height: 44px;
+    font-size: 16px;
+    background-color: #505050;
+    border: none;
+    color: white;
+    width: 400px;
+}
+
+#main .nav .input i {
+    background-color: #505050;
+    color: white;
+    top: 14px;
+    position: absolute;
+    left: 10px;
+}
+
+
+.profile {
+    display: flex;
+    background-color: #505050;
+    color: white;
+    padding: 8px 24px 4px 8px;
+    border-radius: 24px;
+    align-items: center;
+}
+
+.profile p {
+    margin-left: 12px;
+    background-color: #505050;
+}
+
+.profile .dp {
+    background-color: #505050;
+}
+
+.profile .dp img {
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+}
+
+.back-heading {
+    color: #6a5c67;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+}
+
+#songs {
+    padding: 20px 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#songs .song {
+    padding: 8px;
+    margin: 0px 20px 12px 20px;
+    background-color: #362636;
+    border-radius: 16px;
+}
+
+#songs .song .title img {
+    border-radius: 8px;
+    height: 220px;
+}
+
+#songs .song .title div {
+    background-color: #362636;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4px;
+}
+
+#songs .song .title div i {
+    padding: 10px 12px 10px 14px;
+    border-radius: 50px;
+    background-color: #34c734;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#songs .song .title div p {
+    color: white;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 170px;
+    font-size: 16px;
+    background-color: #362636;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 200px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #302323;
+    margin: auto;
+    padding: 12px 12px 8px;
+    border: 1px solid #503b4f;
+    width: 324px;
+    border-radius: 20px;
+}
+
+.modal-content p {
+    color: white;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 8px;
+    background-color: #302323;
+}
+
+.modal-content audio{
+    background-color: #302323;
+}
+
+.modal-content img {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.modal-content .closs {
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 20%;
+    margin: 4px auto 0px;
+    background-color: #302323;
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 425px) {
+
+    .left #nav .hamburger{
+        display: block;
+        margin-left: auto;
+        color: #72d572;
+        cursor: pointer;
+        font-size: 28px;
+    }
+
+    #main {
+        width: 100%;
+    }
+
+    #main .nav {
+        padding: 0px;
+        height: 60px;
+    }
+
+    #main .nav .input {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .profile {
+        display: none;
+    }
+
+    #main .nav .input #submit {
+        height: 36px;
+        padding: 0px;
+        margin-left: 4px;
+        font-size: 12px;
+        width: 76px;
+    }
+
+    #main .nav .input #search {
+        height: 36px;
+        font-size: 12px;
+        width: 68%;
+    }
+
+    #main .nav .input i {
+        top: 10px;
+        left: 22px;
+    }
+
+    #main #main-heading {
+        padding: 0;
+        text-align: center;
+        margin: 0px auto;
+        font-size: 28px;
+    }
+
+    #songs {
+        padding: 8px 12px 12px;
+    }
+
+    #songs .song {
+        margin: 12px auto;
+    }
+
+    #songs .song .title img {
+        height: 100%;
+        width: 100%;
+    }
+    .wrapper {
+        flex-direction: column;
+    }
+    .left {
+        position: unset;
+        height: auto;
+        width: 100%;
+        padding: 4px 12px 4px;
+    }
+    #nav {
+        margin-bottom: unset;
+        height: 48px;
+    }
+    .back-heading {
+        margin-top: 52px;
+        font-size: 44px;
+    }
+    .modal {
+        padding-top: 100px;
+    }
+    .modal-content {
+        padding: 8px;
+        width: 280px;
+    }
+    .modal-content audio{
+        width: 100%;
+    }
+    .left .home {
+        display: none;
+        margin-top: 8px;
+    }
+    .left .liked {
+        display: none;
+    }
+}
